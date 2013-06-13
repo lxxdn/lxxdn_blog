@@ -1,0 +1,43 @@
+@import "bootstrap";
+
+
+#header{
+	 background-image: url("blog_header_pic.jpg");
+	 padding-top: 20px;
+	 padding-left: 150px;
+	 height: 40px;
+	 margin-bottom: 0px;
+
+	 h1{
+	 	margin-bottom: 5px;
+	 	font-size: 30pt;
+	 }
+	 p{
+	 	font-size: 120%;
+	 }
+}
+
+
+#footer{
+	background-color: #CCCCCC;
+	height: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 20px;
+	p{
+		margin-top: 0px;
+		color: white;
+		font-size: 10pt;
+		text-align: right;
+	}
+}
+
+ .navbar{
+ 	background-color: #C8BEAE;
+ 	.container{
+ 		margin-left: 130px;
+ 	}
+ 	li{
+ 		font-size: 18px;
+ 	}
+ }
