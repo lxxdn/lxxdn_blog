@@ -1,7 +1,9 @@
 LxxdnBlog::Application.routes.draw do
+  get "post/index"
+
   get "blog/index"
 
-  root :to => 'blog#index'
+  root :to => 'post#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
