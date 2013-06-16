@@ -3,10 +3,6 @@ require 'spec_helper'
 describe User do
 
 	before(:each) do 
-		#@user = User.new(username: 'luxiao', email: 'julien.luxiao@gmail.com', 
-		#	password: "12345", password_confirmation: "12345")
-		#@user2 = User.new(username: 'lxxdn', email: 'mail@lxxdn.com', 
-		#	password: "12345", password_confirmation: "12345")
 
 		@user1 = build(:user1)
 		@user2 = build(:user2)
@@ -38,10 +34,21 @@ describe User do
 
 			it "should be unique" do
 				@user1.save
-				@user2.username = 'lxxdn'
+				@user2.username = @user1.username
 				@user2.valid?.should == false
 			end 
   		end
+  	end
+
+  	describe "#remember_token" do
+  	  it "should not be nil" do
+  	  	@user1.save
+  	  	@user2.save
+  	    @user1.remember_token.should_not == nil
+  	    @user2.remember_token.should_not == nil
+  	    @user1.destroy
+  	    @user2.destroy
+  	  end
   	end
 
   	describe "#email" do
@@ -62,7 +69,7 @@ describe User do
 
   		  it "should be unique" do
   		    @user1.save
-  		    @user2.email = "julien.luxiao@gmail.com"
+  		    @user2.email = @user1.email
   		    @user2.valid?.should == false
   		  end
   		end

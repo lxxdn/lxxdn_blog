@@ -84,3 +84,24 @@ body{
     padding: 7px 9px;
   }
 
+//for displaying all posts
+.posts{
+	li{
+    padding: 0px 40px 29px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5; 
+    max-height: 150px;
+    height: 150px;
+    @include border-radius (10px); 
+    list-style: none;
+	}
+	h2{
+		
+		border-bottom: 1px dashed #CCCCCC;
+	}
+
+}
+  
+

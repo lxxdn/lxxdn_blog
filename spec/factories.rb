@@ -1,14 +1,14 @@
 FactoryGirl.define do
 	factory :user1,class: User do
-		username 'lxxdn'
-		email  'julien.luxiao@gmail.com' 
+		username 'noejean'
+		email  'noejean.caramilli@gmail.com' 
 		password '12345'
 		password_confirmation { |u| u.password }
 	end 
 
 	factory :user2,class: User do
-		username 'luxiao'
-		email  'mail@lxxdn.com' 
+		username 'yannik'
+		email  'yannik.legoc@gmail.com' 
 		password '12345'
 		password_confirmation { |u| u.password }
 	end 
