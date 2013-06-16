@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Post do
 
   before(:each) do
-  	@post = Post.new(title: 'coucou', content: 'foofoofoo') 
+  	@post = build(:post)
   end
 
   describe "#title" do
@@ -33,15 +33,21 @@ describe Post do
       @post.content = 'good morning'
       @post.valid?.should == true
     end
+
   end
 
   describe "#author" do
     it "should not be empty" do
-      user = User.new()
+      @post.author.should_not == nil
     end
 
     it "should have the same to the user who creates it " do
-      pending
+    	@user1 = build(:user1)
+    	@user = User.find_by_username(@user1.username)
+    	@user.destroy
+      @user = create(:user1)
+      @post = @user.posts.build(title: 'test', content: '1122334455')
+      @post.author.should == @user
     end
 
   end

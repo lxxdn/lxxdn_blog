@@ -12,4 +12,5 @@ class User < ActiveRecord::Base
   	message: "The Email's format is not correct"},
   	presence: true, uniqueness: true
 
+  has_many :posts, dependent: :destroy
 end
