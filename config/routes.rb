@@ -1,7 +1,15 @@
 LxxdnBlog::Application.routes.draw do
+  get "user/new"
+
+  get "user/create"
+
   get "post/index"
 
   get "blog/index"
+
+  resources :users
+  match "signup" => "user#new"
+  match "signin" => "session#new"
 
   root :to => 'post#index'
   # The priority is based upon order of creation:

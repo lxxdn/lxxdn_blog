@@ -1,5 +1,8 @@
 @import "bootstrap";
 
+body{
+	background-color: #f5f5f5;
+}
 
 #header{
 	 background-image: url("blog_header_pic.jpg");
@@ -18,13 +21,13 @@
 }
 
 
-#footer{
+.footer{
 	background-color: #CCCCCC;
 	height: 20px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	margin-top: 20px;
-
+	margin-bottom: 10px;
 	.sign_in_up {
 		a{
 			margin-top: 0px;
@@ -54,3 +57,30 @@
  		font-size: 18px;
  	}
  }
+
+ .form_sign{
+ 	max-width: 300px;	
+ }
+
+ .form-sign {
+    max-width: 300px;
+    padding: 19px 29px 29px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    
+    
+    @include border-radius (10px); 
+  }
+  .form-signin .form-signin-heading,
+  .form-signin .checkbox {
+    margin-bottom: 10px;
+  }
+  .form-signin input[type="text"],
+  .form-signin input[type="password"] {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+  }
+
