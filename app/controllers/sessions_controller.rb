@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-	
+	layout 'simple_application', only: :new
+
 	def new
 	end
 
@@ -8,10 +9,16 @@ class SessionsController < ApplicationController
 
 		if user.authenticate(params[:session][:password])
 			flash[:success]='Logged succeed'
+			sign_in user
 			redirect_to root_path
 		else
 			flash[:alert]='Username or password is not correct'
 			render 'new'	
 		end 
+	end
+
+	def destroy
+		sign_out
+		redirect_to root_path
 	end
 end

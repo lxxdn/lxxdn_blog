@@ -28,7 +28,7 @@ body{
 	padding-bottom: 5px;
 	margin-top: 20px;
 	margin-bottom: 10px;
-	.sign_in {
+	.sign_in_out{
 		a{
 			margin-top: 0px;
 			font-size: 12pt;
@@ -37,6 +37,7 @@ body{
 			margin-right: 30px;
 
 		}
+	
 	}
 
 	.declaration {
@@ -69,7 +70,6 @@ body{
     margin: 0 auto 20px;
     background-color: #fff;
     border: 1px solid #e5e5e5;
-    
     
     @include border-radius (10px); 
   }
@@ -104,6 +104,7 @@ body{
 	}
 }
 
+//reminder of signing up
 .reminder{
 	font-size: 10pt;
 	color: gray;
@@ -111,5 +112,60 @@ body{
 	float: right;
 	margin-top: 0px;
 }
-  
+ .alert{
+ 	display: block;
+ }
+ // flash
+ .alert-success{
+ 	margin-left: 46px;
+	padding-left: 45px;
+}
+
+//new post button
+.new_post{
+	a{
+		margin-top: 0px;
+		font-size: 18px;
+		float: left;
+		margin-left: 150px;
+		margin-right: 30px;
+	}
+}
+
+.new_post_form{
+    padding: 19px 29px 29px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+
+    @include border-radius (10px); 
+}
+
+.new_post_title #post_title{
+	margin-left: 200px;
+	width: 450px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.new_post_content #post_content{
+	margin-left: 200px;
+	width: 450px;
+	height: 450px;
+}
+.new_post_form h3{
+	border-bottom: 1px solid #CCCCCC
+}
+
+.new_post_publish_button{
+	float: left;
+	margin-left: 200px;
+	margin-right: 10px;
+}
+.new_post_cancel_button{
+	a{
+		float: left;
+		margin: 0px;
+		font-size: 15px;
+	}
+}
 

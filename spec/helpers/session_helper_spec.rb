@@ -12,8 +12,6 @@ require 'spec_helper'
 # end
 describe SessionHelper do
 
-	
-
 	describe "user" do
   	context "when signed in" do
 

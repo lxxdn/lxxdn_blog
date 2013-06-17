@@ -8,8 +8,11 @@ LxxdnBlog::Application.routes.draw do
 
   resources :users
   resources :sessions
-  match "signup" => "users#new"
-  match "signin" => "sessions#new"
+  resources :posts
+  match "/signup" => "users#new"
+  match "/signin" => "sessions#new"
+  match "/signout" => "sessions#destroy", via: :delete
+
 
   root :to => 'posts#index'
   # The priority is based upon order of creation:

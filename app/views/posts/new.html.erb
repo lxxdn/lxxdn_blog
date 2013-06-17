@@ -1,0 +1,22 @@
+
+<div class="new_post_form">
+<%= form_for(@post) do |f| %>
+	<h3>New post</h3>
+
+		<div class="new_post_title">
+			<%= f.text_field :title, placeholder: 'Title' %>
+		</div>
+
+		<div class="new_post_content">
+			<%= f.text_area :content, placeholder: 'Content ...' %>
+		</div>
+		<div class="new_post_publish_button">
+			<%= f.submit "Publish" ,class: "btn btn-primary" %>
+		</div>
+		<div class="new_post_cancel_button">
+			<%= link_to "Cancel", root_path, class:"btn" %>
+		</div>
+			
+<% end %>
+
+</div>

@@ -1,9 +1,25 @@
 
 <div class="footer">
-	<div class="sign_in">
-	<%= link_to "sign in", signin_path %>
-	</div>
+
+	<% if signed_in? %>
+		
+		<div class="sign_in_out">
+			<%= link_to "sign out", signout_path, method: :delete %>
+		</div>
+
+	<% else %>
+		<div class="sign_in_out">
+			<%= link_to "sign in", signin_path %>
+		</div>
+	<% end %>
+	
 	<div class="declaration">
 	Powered by <a href="https://github.com/lxxdn">lxxdn</a> 2013 
 	</div>
+	
+	<% if signed_in? && current_user.admin %>
+		<div class="new_post">
+			<%= link_to '+ post', new_post_path %>
+		</div>
+	<% end %>
 </div>
