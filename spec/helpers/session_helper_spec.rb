@@ -11,5 +11,58 @@ require 'spec_helper'
 #   end
 # end
 describe SessionHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+	
+
+	describe "user" do
+  	context "when signed in" do
+
+  		before(:each){
+				@user = create(:user1)
+				sign_in @user
+			}
+			after(:each) {
+				@user.destroy
+			}
+
+    	it "should be the same than the current_user " do
+      	current_user.should == @user
+    	end
+
+    	it "should have the same remember_token than that in cookies" do
+    	  cookies[:remember_token].should == @user.remember_token
+    	end
+
+    	it "signed_in? returns true" do
+    	  signed_in?.should == true
+    	end
+  	end
+  end
+
+  describe "current_user" do
+
+  	before(:each){
+  		sign_out
+	  }
+
+  	context "when signed out" do
+  		it "should be nil" do
+      	current_user.should == nil
+    	end  
+  	end
+  end
+
+  describe "remember_token in cookies" do
+
+  	before(:each){
+  		sign_out
+	  }
+
+    context "when signed out" do
+    	it "should be nil" do
+      	cookies[:remember_token].should == nil
+    	end  
+    end
+  end
+
 end
