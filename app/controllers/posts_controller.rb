@@ -1,9 +1,6 @@
 class PostsController < ApplicationController
   def index
-  	user = User.find_by_admin(true)
-  	if user && user.posts.size > 0
-  		@posts = Post.order('created_at DESC')
-  	end 
+		@posts = Post.order('created_at DESC')
   end
 
   def new
@@ -28,7 +25,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to root_path
+    redirect_to root
   end
 
 end

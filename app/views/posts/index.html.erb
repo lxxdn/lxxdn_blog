@@ -1,5 +1,11 @@
 <div class='posts'>
   <ul>
+  	<% if @posts.size > 0 %>
     <%= render @posts %>
+    <% elsif signed_in? && current_user.admin == true%>
+    <p class="no_post_message">You have not yet a post? Please create a post!!</p>
+    <% else %>
+    <p class="no_post_message">Sorry, there is no post!!</p>
+    <% end %>
   </ul>
 </div>
