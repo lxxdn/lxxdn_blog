@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   def index
   	user = User.find_by_admin(true)
   	if user && user.posts.size > 0
-  		@posts = user.posts
+  		@posts = Post.order('created_at DESC')
   	end 
   end
 
@@ -20,4 +20,9 @@ class PostsController < ApplicationController
   		render 'new'
   	end
   end
+
+  def show
+    @post = Post.find(params[:id])
+  end
+
 end

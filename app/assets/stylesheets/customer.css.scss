@@ -97,6 +97,7 @@ body{
     height: 150px;
     @include border-radius (10px); 
     list-style: none;
+    font-size: 12pt;
 	}
 	h2{
 		
@@ -153,7 +154,7 @@ body{
 	height: 450px;
 }
 .new_post_form h3{
-	border-bottom: 1px solid #CCCCCC
+	border-bottom: 1px solid #CCCCCC;
 }
 
 .new_post_publish_button{
@@ -169,3 +170,15 @@ body{
 	}
 }
 
+.single_post{
+	padding: 19px 29px 29px;
+    margin-left: 40px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    font-size: 14pt;
+    @include border-radius (10px); 
+    h1{
+    	border-bottom: 1px dashed #CCCCCC;
+    	padding-bottom: 10px;
+    }
+}
