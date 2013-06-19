@@ -1,0 +1,6 @@
+
+<div class="post_header">
+<% if signed_in? && current_user.admin %>
+	<%= link_to "x", @post, method: :delete %>
+<% end %>
+</div>
