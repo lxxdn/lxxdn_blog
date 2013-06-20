@@ -1,0 +1,10 @@
+<div class="single_post">
+	<h1 class="blog_archive">Blog Archive</h1>
+	<% @archives.each do |archive| %>
+		<div class="single_archive">
+		<p class="date"><%= archive.created_at.strftime("%d %b. %Y") %></p>
+		<a href="<%= post_path(archive) %>"><p class="title"><%= archive.title %></p></a>
+		<br/>
+		</div>
+	<% end %>
+</div>

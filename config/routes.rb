@@ -12,7 +12,8 @@ LxxdnBlog::Application.routes.draw do
   match "/signup" => "users#new"
   match "/signin" => "sessions#new"
   match "/signout" => "sessions#destroy", via: :delete
-
+  match '/about_me' => "me#about_me"
+  match '/archives' => "posts#archives"
 
   root :to => 'posts#index'
   # The priority is based upon order of creation:

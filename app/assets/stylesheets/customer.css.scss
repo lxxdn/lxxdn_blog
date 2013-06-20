@@ -200,3 +200,46 @@ body{
 	margin-left: 20px;
 	color: gray;
 }
+
+.about_me{
+	h2{
+		border-bottom: 1px dashed #CCCCCC;
+		font-size: 35pt;
+		padding-bottom: 10px;
+	}
+	p{
+		font-size: 12pt;
+	}
+	h3{
+		border-bottom: 1px dashed #CCCCCC;
+		font-size: 30pt;
+		padding-bottom: 10px;
+		margin-top: 30px;
+	}
+	a{
+		font-size: 13pt;
+	}
+}
+
+.single_archive{
+	margin-top: 20px;
+	border-bottom: 1px dashed #CCCCCC;
+	display: block;
+	padding-bottom: 10px;
+	.date{
+		color: gray;
+		font-size: 14px;
+		float: left;
+		margin-right: 40px;
+	}
+	.title{
+		font-size: 30px;
+		font-weight:bold;
+		float: left;
+
+	}
+}
+
+.blog_archive{
+	margin-bottom: 50px;
+}

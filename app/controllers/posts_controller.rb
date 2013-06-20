@@ -28,4 +28,9 @@ class PostsController < ApplicationController
     redirect_to root
   end
 
+  def archives
+    @archives = Post.order('created_at DESC')
+  end
+
+
 end
