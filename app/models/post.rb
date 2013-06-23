@@ -5,6 +5,8 @@ class Post < ActiveRecord::Base
   validates :content, presence: true, length: {minimum: 6}
 
   belongs_to :author, class_name: "User", foreign_key: "user_id"
+  has_and_belongs_to_many :tags
+
 end
 
 

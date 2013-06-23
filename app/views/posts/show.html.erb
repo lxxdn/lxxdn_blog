@@ -2,7 +2,15 @@
 <%= render 'posts/header' %>
 
 <div class="single_post">
-<h2><%= @post.title %></h2><br/>
+<h2><%= @post.title %></h2>
+
+<div class="post_tags">
+	Tags: 
+	<% @post.tags.each do |tag| %>
+		<a href='#'><%= tag.title %></a>
+	<% end %>
+</div>
+
 <p><%= @post.content %></p>
 <%= render 'posts/footer' %>
 </div>

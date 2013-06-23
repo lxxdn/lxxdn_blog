@@ -11,7 +11,13 @@ class PostsController < ApplicationController
   	title = params[:post][:title]
   	content = params[:post][:content]
   	post = current_user.posts.build(title: title, content: content)
+
+
+
   	if post.save
+
+      Tag.save_tags post, params[:post][:tags]
+
   		redirect_to root_path
   	else
   		render 'new'
@@ -25,7 +31,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to root
+    redirect_to root_path
   end
 
   def archives
