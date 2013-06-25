@@ -12,12 +12,8 @@ class PostsController < ApplicationController
   	content = params[:post][:content]
   	post = current_user.posts.build(title: title, content: content)
 
-
-
   	if post.save
-
       Tag.save_tags post, params[:post][:tags]
-
   		redirect_to root_path
   	else
   		render 'new'
