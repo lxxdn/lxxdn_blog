@@ -1,21 +1,21 @@
 
 <div class="new_post_form">
 <%= form_for(@post) do |f| %>
-	<h3>New post</h3>
+	<h3>Edit post</h3>
 
 	<div class="new_post_title">
 		<%= f.text_field :title, placeholder: 'Title' %>
 	</div>
 
 	<div class="new_post_tag">
-		<%= f.text_field :tags, placeholder: 'Tags', value: ''%>
+		<%= f.text_field :tags, placeholder: 'Tags', value: tags_to_string(@post.tags) %>
 	</div>
 
 	<div class="new_post_content">
 		<%= f.text_area :content, placeholder: 'Content ...' %>
 	</div>
 	<div class="new_post_publish_button">
-		<%= f.submit "Publish" ,class: "btn btn-primary" %>
+		<%= f.submit "Update" ,class: "btn btn-primary" %>
 	</div>
 	<div class="new_post_cancel_button">
 		<%= link_to "Cancel", root_path, class:"btn" %>

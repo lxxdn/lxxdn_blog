@@ -1,6 +1,6 @@
 class Tag < ActiveRecord::Base
    attr_accessible :title
-
+   
    has_and_belongs_to_many :posts
 
    validates :title, presence: true, uniqueness: true
@@ -15,8 +15,9 @@ class Tag < ActiveRecord::Base
           else
              post.tags.create(title: tag_title) 
          end 
-
   		end
   	end
+
+    
 
 end

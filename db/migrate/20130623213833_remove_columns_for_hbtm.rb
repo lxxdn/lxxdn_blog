@@ -4,5 +4,4 @@ class RemoveColumnsForHbtm < ActiveRecord::Migration
   	remove_column :tags, :post_id
   end
 
-  
 end
