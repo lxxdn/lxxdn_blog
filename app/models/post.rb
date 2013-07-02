@@ -6,6 +6,7 @@ class Post < ActiveRecord::Base
 
   belongs_to :author, class_name: "User", foreign_key: "user_id"
   has_and_belongs_to_many :tags
+  has_many :comments, dependent: :destroy
 
   before_destroy :delete_having_no_post_tags 
 
@@ -18,7 +19,6 @@ class Post < ActiveRecord::Base
   			end
   		end
   	end
-
 end
 
 

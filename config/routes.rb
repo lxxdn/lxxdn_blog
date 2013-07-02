@@ -1,4 +1,8 @@
 LxxdnBlog::Application.routes.draw do
+  get "comments/new"
+
+  get "comments/create"
+
   get "users/new"
 
   get "users/create"
@@ -10,6 +14,7 @@ LxxdnBlog::Application.routes.draw do
   resources :sessions
   resources :posts
   resources :tags
+  resources :comments
 
   match "/signup" => "users#new"
   match "/signin" => "sessions#new"

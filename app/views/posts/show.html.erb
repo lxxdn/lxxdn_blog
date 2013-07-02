@@ -13,5 +13,33 @@
 
 <p><%= @post.content %></p>
 <%= render 'posts/footer' %>
+
+<div class="comment_title">
+	<%= pluralize(@post.comments.size, 'comment') %>
 </div>
+
+<div class="comment">
+	<%= render @post.comments unless @post.comments.size == 0 %>
+</div>
+
+<div class="comments">
+	<div class="left_gravatar_imag">
+		<%= image_tag current_user.gravatar_img_src %>
+	</div>
+
+	<div class="right_part">
+		<%= form_for(@post.comments.new, url: comments_path) do |f|%>
+			<div><%= f.hidden_field :post_id %></div>
+			<div><%= f.hidden_field :user_id, value: current_user.id %></div>
+			<%= f.text_area :content %>
+			<%= f.submit 'Comment' %>
+		<% end %>
+	</div>
+</div>
+</div>
+
+
+
+
+
 

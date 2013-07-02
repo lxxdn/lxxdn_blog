@@ -1,0 +1,14 @@
+<div class="comments">
+
+	<div class='left_gravatar_imag'>
+		<%= image_tag comment.user.gravatar_img_src  %>
+	</div>
+
+	<div class="right_part">
+		<p class="name"><%= comment.user.username %></p>
+		
+		<p class="timestamp"><%= time_ago_in_words(comment.created_at) %> ago</p>
+		<p class="content"><%= comment.content %></p>
+	</div>
+	<hr/>
+</div>
