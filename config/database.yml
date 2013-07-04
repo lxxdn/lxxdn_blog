@@ -32,11 +32,11 @@ test:
   socket: /tmp/mysql.sock
 
 production:
-  adapter: sqlite3
+  adapter: postgresql
   encoding: utf8
   reconnect: false
   database: lxxdn_blog_production
   pool: 5
-  username: root
-  password:
+  username: postgres
+  password: admin
   socket: /tmp/mysql.sock
