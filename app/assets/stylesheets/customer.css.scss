@@ -34,7 +34,7 @@ body{
 			font-size: 12pt;
 			float: right;
 			margin-left: 10px;
-			margin-right: 110px;
+			margin-right: 8%;
 			text-decoration: none;
 
 		}
@@ -129,7 +129,7 @@ body{
 		margin-top: 0px;
 		font-size: 18px;
 		float: left;
-		margin-left: 150px;
+		margin-left: 12%;
 		margin-right: 30px;
 	}
 }
@@ -144,20 +144,20 @@ body{
 }
 
 .new_post_title #post_title{
-	margin-left: 200px;
-	width: 450px;
+	margin-left: 25%;
+	width: 73%;
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
 .new_post_tag #post_tags{
-	margin-left: 200px;
-	width: 450px;
+	margin-left: 25%;
+	width: 73%;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 .new_post_content #post_content{
-	margin-left: 200px;
-	width: 450px;
+	margin-left: 25%;
+	width: 73%;
 	height: 450px;
 	margin-top: 20px;
 	margin-bottom: 10px;
@@ -316,6 +316,10 @@ body{
 			height:50px;
 			margin-right: 15px;
 	}
+	#ready_to_comment img{
+		float: left;
+	}
+
 	
 	.right_part{
 		.name{
@@ -330,7 +334,17 @@ body{
 		}
 		.content {
 			color: gray;
-
+			font-size: 12pt;
+		}
+		textarea{
+			color: red;
+			height: 80px;
+			width: 80%;
+			display: block;
+		}
+		#comment_submit{
+			float: right;
+			margin-right: 6%
 		}
 	}
 
