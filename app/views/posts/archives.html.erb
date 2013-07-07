@@ -3,7 +3,7 @@
 	<% @archives.each do |archive| %>
 		<div class="single_archive">
 		<p class="date"><%= archive.created_at.strftime("%d %b. %Y") %></p>
-		<a href="<%= post_path(archive) %>"><p class="title"><%= archive.title %></p></a>
+		<a href="<%= post_path(archive) %>"><p class="title"><%= archive.title.truncate(25) %></p></a>
 		<br/>
 		</div>
 	<% end %>
