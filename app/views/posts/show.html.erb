@@ -11,7 +11,10 @@
 	<% end %>
 </div>
 
-<p><%= @post.content %></p>
+<div class="markdown">
+<%= raw (markdown @post.content) %>
+</div>
+
 <%= render 'posts/footer' %>
 
 <div class="comment_title">

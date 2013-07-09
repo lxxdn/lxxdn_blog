@@ -1,0 +1,1 @@
+1. when the title is too long, in the page "show post", the title will go out of the framework
