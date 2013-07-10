@@ -100,7 +100,6 @@ body{
     font-size: 12pt;
 	}
 	h2{
-		
 		border-bottom: 1px dashed #CCCCCC;
 	}
 }
@@ -196,13 +195,35 @@ body{
   	border-bottom: 1px dashed #CCCCCC;
   	padding-bottom: 10px;
   }
+  h2{
+		color: #1771C7;
+		margin-bottom: 0px;
+	}
+	.markdown {
+		h2{
+			color: black;
+		}
+		p{
+			font-size: 12pt;
+		}
+		li{
+			font-size: 12pt;
+		}
+	}
+}
+.markdown_commments{
+	margin-left: 13%;
+	h2{
+			color: black;
+		}
+		p{
+			font-size: 12pt;
+		}
+		li{
+			font-size: 12pt;
+		}
 }
 
-
-.single_post h2{
-	color: #1771C7;
-	margin-bottom: 0px;
-}
 
 .post_tags{
 	color: #CCCCCC;
@@ -343,7 +364,6 @@ body{
 			font-size: 12pt;
 		}
 		textarea{
-			color: red;
 			height: 80px;
 			width: 80%;
 			display: block;

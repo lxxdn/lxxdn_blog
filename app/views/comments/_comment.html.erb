@@ -8,7 +8,9 @@
 		<p class="name"><%= comment.user.username %></p>
 		
 		<p class="timestamp"><%= time_ago_in_words(comment.created_at) %> ago</p>
-		<p class="content"><%= comment.content %></p>
+		<div class="markdown_commments">
+			<%= raw (markdown comment.content) %>
+		</div>
 	</div>
 	<hr/>
 </div>

@@ -12,7 +12,7 @@
 </div>
 
 <div class="markdown">
-<%= raw (markdown @post.content) %>
+<%= raw(markdown @post.content) %>
 </div>
 
 <%= render 'posts/footer' %>
@@ -21,26 +21,11 @@
 	<%= pluralize(@post.comments.size, 'comment') %>
 </div>
 
-<div class="comment">
-	<%= render @post.comments unless @post.comments.size == 0 %>
-</div>
 
-<div class="comments" >
-	<div class="left_gravatar_imag" id="ready_to_comment">
-		<%= image_tag current_user.gravatar_img_src %>
-	</div>
+<%# comments %>
+<%= render "comments/comments" %>
 
-	<div class="right_part">
-		<%= form_for(@post.comments.new, url: comments_path) do |f|%>
-			<div><%= f.hidden_field :post_id %></div>
-			<div><%= f.hidden_field :user_id, value: current_user.id %></div>
-			<%= f.text_area :content, placeholder: "Comment..." %>
-			<%= f.submit 'Comment', class: 'btn btn-primary',id: 'comment_submit'%>
-		<% end %>
-	</div>
-</div>
-</div>
-
+<%= render "comments/to_comment" %>
 
 
 
