@@ -25,9 +25,9 @@
 <%# comments %>
 <%= render "comments/comments" %>
 
-<%= render "comments/to_comment" %>
+<%= render "comments/to_comment" unless current_user == nil%>
 
-
+</div>
 
 
 
