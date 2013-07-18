@@ -9,16 +9,24 @@ class PostsController < ApplicationController
   end
 
   def create
-  	title = params[:post][:title]
-  	content = params[:post][:content]
-  	post = current_user.posts.build(title: title, content: content)
+    title = params[:post][:title]
+    content = params[:post][:content]
+    post = current_user.posts.build(title: title, content: content)
 
-  	if post.save
+    if post.save
       Tag.save_tags post, params[:post][:tags]
-  		redirect_to root_path
-  	else
-  		render 'new'
-  	end
+      redirect_to root_path
+    else
+      render 'new'
+    end
+  end
+
+  def preview
+    render text: (markdown params[:body])
+  end
+
+  def html_create
+    
   end
 
   def show

@@ -10,7 +10,11 @@
 	<div class="new_post_tag">
 		<%= f.text_field :tags, placeholder: 'Tags', value: ''%>
 	</div>
-
+	
+	<div class="markdown_show_mode">
+			<%= link_to 'edit', '#'%>
+			<%= link_to 'preview', '#'%>	
+	</div>
 	<div class="new_post_content">
 		<%= f.text_area :content, placeholder: 'Content ...' %>
 	</div>

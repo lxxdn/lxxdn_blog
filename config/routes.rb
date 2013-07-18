@@ -12,7 +12,11 @@ LxxdnBlog::Application.routes.draw do
 
   resources :users
   resources :sessions
-  resources :posts
+  resources :posts do
+    collection do
+      post 'preview'
+    end 
+  end
   resources :tags
   resources :comments
 
