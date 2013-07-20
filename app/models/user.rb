@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
 
   #validations
-  validates :username, presence: true,  uniqueness: true
+  validates :username, presence: true,  uniqueness: { message: " existed"}
   validates :email, format: {with: VALID_EMAIL_REGEX, 
   	message: "The Email's format is not correct"},
   	presence: true, uniqueness: true

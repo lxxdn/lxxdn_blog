@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  layout 'simple_application', only: :new
   def new
   	@user = User.new
   end
@@ -9,7 +10,7 @@ class UsersController < ApplicationController
       sign_in @user
   		redirect_to root_path
   	else
-  		render 'new'
+  		render 'new', layout: 'simple_application'
   	end
   end
 end

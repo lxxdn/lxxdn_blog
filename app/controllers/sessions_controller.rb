@@ -5,14 +5,14 @@ class SessionsController < ApplicationController
 	end
 
 	def create
-		user = User.find_by_email(params[:session][:email])
+		@user = User.find_by_email(params[:session][:email])
 
-		if user.authenticate(params[:session][:password])
+		if @user.authenticate(params[:session][:password])
 			flash[:success]='Logged succeed'
-			sign_in user
+			sign_in @user
 			redirect_to root_path
 		else
-			flash[:alert]='Username or password is not correct'
+			flash.now[:alert]='Username or password is not correct'
 			render 'new'	
 		end 
 	end

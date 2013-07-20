@@ -1,4 +1,7 @@
+
 <div class="form-sign">
+<% @object_model = @user %>
+<%= render 'shared/error_message' %>
 <%= form_for(@user) do |f| %>
       <h2 class="form-signin-heading">Please sign up</h2>
       <%= f.text_field :username,class: "input-block-level",placeholder: "User name" %>

@@ -1,5 +1,7 @@
 
 <div class="new_post_form">
+<% @object_model = @post %>
+<%= render 'shared/error_message' %>
 <%= form_for(@post) do |f| %>
 	<h3>New post</h3>
 

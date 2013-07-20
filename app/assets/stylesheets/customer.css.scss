@@ -141,7 +141,7 @@ body{
 
 .new_post_form{
     padding: 19px 29px 29px;
-    margin: 0 auto 20px;
+    margin-left: 5%;
     background-color: #fff;
     border: 1px solid #e5e5e5;
 
@@ -192,7 +192,7 @@ body{
 
 .new_post_publish_button{
 	float: left;
-	margin-left: 200px;
+	margin-left: 25%;
 	margin-right: 10px;
 }
 .new_post_cancel_button{
@@ -434,3 +434,9 @@ body{
 
 		}
 	}
+	
+#error_explanation{
+	li{
+		color: red;
+	}
+}
