@@ -368,9 +368,22 @@ body{
 			width: 80%;
 			display: block;
 		}
+		.markdown_preview{
+			// background-color: black;
+			// height: 83px;
+			width: 82%;
+			display: block;
+			border: 1px solid #CCCCCC;
+			margin-left: 10%;
+			margin-bottom: 1.5%;
+			@include border-radius (4px); 
+			.markdown_commments{
+				margin-left: 0%
+			}
+		}
 		#comment_submit{
 			float: right;
-			margin-right: 6%
+			margin-right: 6%;
 		}
 
 	}
