@@ -9,6 +9,7 @@ $(document).ready ->
 		false
 	$('.preview').click -> 
 		$('.new_post_content').hide()
+		$('.post_markdown_preview').html("loading...")
 		$(this).addClass("active")
 		$('.edit').removeClass("active")
 		$('.post_markdown_preview').show()
