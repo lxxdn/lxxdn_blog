@@ -14,4 +14,6 @@ class CommentsController < ApplicationController
     end 
     redirect_to post_path(@comment.post_id)
   end
+
+
 end

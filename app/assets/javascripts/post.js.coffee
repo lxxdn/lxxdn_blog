@@ -1,19 +1,21 @@
 $(document).ready -> 
-	$('.markdown_preview').hide()
+	$('.post_markdown_preview').hide()
 	$('.edit').click -> 
-		$('#conmment_area').show()
-		$('.markdown_preview').empty()
-		$('.markdown_preview').hide()
+		$(this).addClass("active")
+		$('.preview').removeClass("active")
+		$('.new_post_content').show()
+		$('.post_markdown_preview').empty()
+		$('.post_markdown_preview').hide()
 		false
 	$('.preview').click -> 
-		$('#conmment_area').hide()
-		$('.markdown_preview').show()
-		$.post '/posts/preview',{body: $('#conmment_area').val()},(data) -> 
+		$('.new_post_content').hide()
+		$(this).addClass("active")
+		$('.edit').removeClass("active")
+		$('.post_markdown_preview').show()
+		$.post '/posts/preview',{body: $('.new_post_content textarea').val()},(data) -> 
 			markdown_div = "<div class='markdown_commments'>"
 			div_end = "</div>"
-			$('.markdown_preview').html "#{markdown_div}#{data}#{div_end}"
+			$('.post_markdown_preview').html "#{markdown_div}#{data}#{div_end}"
 			false
 		false
-
-
 			

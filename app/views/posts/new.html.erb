@@ -11,13 +11,16 @@
 		<%= f.text_field :tags, placeholder: 'Tags', value: ''%>
 	</div>
 	
-	<div class="markdown_show_mode">
-			<%= link_to 'edit', '#'%>
-			<%= link_to 'preview', '#'%>	
+	<div class="markdown_show_mode go_right">
+			<%= link_to 'edit ', '#', class: "edit active"%>
+			<%= link_to 'preview', '#', class: "preview"%>	
 	</div>
 	<div class="new_post_content">
 		<%= f.text_area :content, placeholder: 'Content ...' %>
 	</div>
+
+	<div class="post_markdown_preview"></div> 
+
 	<div class="new_post_publish_button">
 		<%= f.submit "Publish" ,class: "btn btn-primary" %>
 	</div>

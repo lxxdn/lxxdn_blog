@@ -6,7 +6,7 @@
 
 	<div class="right_part">
 		<div class="markdown_show_mode">
-			<%= link_to 'edit', '#', class: "edit"%>
+			<%= link_to 'edit', '#', class: "edit active"%>
 			<%= link_to 'preview', '#', class: "preview"%>
 		</div>
 		<%= form_for(@post.comments.new,name: "new_post_comment_form", url: comments_path) do |f|%>

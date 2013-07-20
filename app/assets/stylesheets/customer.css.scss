@@ -146,6 +146,25 @@ body{
     border: 1px solid #e5e5e5;
 
     @include border-radius (10px); 
+
+    .go_right{
+    	margin-left: 25%;
+    }
+    .post_markdown_preview{
+
+    	width: 73%;
+			display: block;
+			border: 1px solid #CCCCCC;
+			margin-left: 25%;
+			margin-bottom: 10px;
+			margin-top: 20px;
+			padding: 5px;
+			@include border-radius (4px); 
+			.markdown_commments{
+				margin-left: 0%
+			}
+    }
+
 }
 
 .new_post_title #post_title{
@@ -164,7 +183,7 @@ body{
 	margin-left: 25%;
 	width: 73%;
 	height: 450px;
-	margin-top: 20px;
+	// margin-top: 20px;
 	margin-bottom: 10px;
 }
 .new_post_form h3{
@@ -365,17 +384,17 @@ body{
 		}
 		textarea{
 			height: 80px;
-			width: 80%;
+			width: 86%;
 			display: block;
 		}
 		.markdown_preview{
-			// background-color: black;
-			// height: 83px;
-			width: 82%;
+			width: 87%;
 			display: block;
+			// height: 180px;
 			border: 1px solid #CCCCCC;
-			margin-left: 10%;
+			margin-left: 11%;
 			margin-bottom: 1.5%;
+			padding: 5px;
 			@include border-radius (4px); 
 			.markdown_commments{
 				margin-left: 0%
@@ -383,17 +402,11 @@ body{
 		}
 		#comment_submit{
 			float: right;
-			margin-right: 6%;
+			// margin-right: 0%;
 		}
 
 	}
-	.markdown_show_mode{
-		a{
-			font-size: 12pt;
-			margin-right: 5px;
-			margin-left: 5px;
-		}
-	}
+
 
 	hr{
 		margin-top: 0px;
@@ -402,4 +415,22 @@ body{
 
 }
 
+.markdown_show_mode{
+		margin-bottom: 3px;
+		a{
+			font-size: 11pt;
+			margin-right: 5px;
+			margin-left: 0px;
+			margin-bottom: 1px;
+			padding-left: 10px;
+			padding-right: 10px;
+			color: black;
+		}
+		.active{
+			// background-color: gray;
+			// @include border-radius (10px); 
+			border: 1px solid #CCCCCC;
+			@include border-radius (7px); 
 
+		}
+	}
