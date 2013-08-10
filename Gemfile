@@ -10,6 +10,7 @@ gem 'redcarpet'
 gem 'coderay'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
+
 #gem 'rails_12factor', group: :production
 
 
