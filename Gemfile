@@ -11,6 +11,7 @@ gem 'coderay'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'unicorn'
 #gem 'rails_12factor', group: :production
 
 
@@ -38,6 +39,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'factory_girl_rails'
+  gem "capistrano"
 end
 
 
