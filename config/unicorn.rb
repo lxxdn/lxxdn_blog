@@ -1,10 +1,10 @@
-root = "/home/username/apps/projectname/current"
+root = "/home/lxxdn/apps/lxxdn_blog/current"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.log"
 stdout_path "#{root}/log/unicorn.log"
 
-listen "/tmp/unicorn.projectname.sock"
+listen "/tmp/unicorn.lxxdn_blog.sock"
 worker_processes 2
 timeout 30
 
