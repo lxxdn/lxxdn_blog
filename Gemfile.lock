@@ -124,6 +124,8 @@ GEM
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.11.0)
+    rvm-capistrano (1.5.0)
+      capistrano (>= 2.15.4)
     sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -165,6 +167,7 @@ DEPENDENCIES
   rails_12factor
   redcarpet
   rspec-rails (~> 2.0)
+  rvm-capistrano
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
