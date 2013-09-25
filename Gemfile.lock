@@ -161,7 +161,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  anjlab-bootstrap-rails (~> 2.2.1.2)
+  anjlab-bootstrap-rails
   bcrypt-ruby (~> 3.0.0)
   capistrano
   coderay

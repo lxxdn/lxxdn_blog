@@ -17,7 +17,7 @@ gem 'capistrano'
 gem 'rvm-capistrano'
 # gem "sass", :require => 'sass'
 gem 'sass-rails',   '~> 3.2.3'
-gem 'anjlab-bootstrap-rails', '~> 2.2.1.2', :require => 'bootstrap-rails'
+gem 'anjlab-bootstrap-rails',  :require => 'bootstrap-rails'
 gem 'compass-rails'
 
 group :production do
